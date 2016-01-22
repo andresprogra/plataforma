@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Workspace</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <%= csrf_meta_tags %>
+  <!-- Latest compiled and minified CSS -->
+  
+</head>
+<body>
+  <%# if user_signed_in? %>
+					<%#= link_to "Cerrar sesión", destroy_user_session_path, class: "btn btn-green", method: :delete%>
+				<%#else%>
+					<%#= link_to "Iniciar sesión", new_user_session_path, class: "btn btn-green" %>
+				<%#end%>
+  <!--<div class="alert alert-dismissible alert-danger">-->
+  <div>
+    <p class="alert"><%= alert %></p>  
+  </div>
+  <!--<div class="alert alert-dismissible alert-warning">-->
+  <div>
+    <p class="notice"><%= notice %></p>
+  </div>
+  <%= yield %>
+
+</body>
+</html>
